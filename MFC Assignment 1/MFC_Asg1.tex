@@ -271,6 +271,69 @@
     \end{tabular}
 \end{frame}
 
+% Slide: Set Operations
+\begin{frame}{Set Operations}
+\begin{block}{Definition}
+Set operations are used to construct new sets from existing ones. The most common operations are Union ($\cup$), Intersection ($\cap$), Difference ($-$), and Complement ($A^c$ or $A'$).
+\end{block}
+\vspace{0.5cm}
+\textbf{Example: Let $A = \{1, 2, 3, 4\}$ and $B = \{3, 4, 5, 6\}$}
+\begin{gather*}
+\text{Union: } A \cup B = \{1, 2, 3, 4, 5, 6\} \\
+\text{Intersection: } A \cap B = \{3, 4\} \\
+\text{Difference: } A - B = \{1, 2\}
+\end{gather*}
+\end{frame}
+
+% Slide: Relations
+\begin{frame}{Relations}
+\begin{block}{Definition}
+A binary relation $R$ from a set $A$ to a set $B$ is a subset of the Cartesian product $A \times B$. If $(a, b) \in R$, we say $a$ is related to $b$, often denoted as $aRb$.
+\end{block}
+\vspace{0.5cm}
+\textbf{Example:} Let $A = \{1, 2, 3\}$ and $B = \{x, y\}$. \\
+The Cartesian product is:
+\begin{gather*}
+A \times B = \{(1, x), (1, y), (2, x), (2, y), (3, x), (3, y)\}
+\end{gather*}
+A relation $R \subseteq A \times B$ could simply be defined as:
+\begin{gather*}
+R = \{(1, x), (2, y), (3, x)\}
+\end{gather*}
+\end{frame}
+
+% Slide: Equivalence Relations
+\begin{frame}{Equivalence Relations}
+\begin{block}{Definition}
+A relation $R$ on a set $A$ is an \textbf{equivalence relation} if it satisfies three properties: it is reflexive, symmetric, and transitive. It partitions the set into disjoint subsets called equivalence classes.
+\end{block}
+\vspace{0.3cm}
+\textbf{Example: Congruence Modulo 3} \\
+Let $R$ be a relation on integers $\mathbb{Z}$ where $aRb \iff a \equiv b \pmod{3}$.
+\begin{itemize}
+    \item \textbf{Reflexive:} $a - a = 0$, which is divisible by 3.
+    \item \textbf{Symmetric:} If $3 \mid (a - b)$, then $3 \mid (b - a)$.
+    \item \textbf{Transitive:} If $3 \mid (a - b)$ and $3 \mid (b - c)$, then $3 \mid (a - c)$.
+\end{itemize}
+\small \textit{Equivalence classes formed: $[0] = \{\dots, -3, 0, 3, \dots\}$, $[1]$, and $[2]$.}
+\end{frame}
+
+% Slide: Chains and Antichains
+\begin{frame}{Chains and Anti-chains}
+\begin{block}{Chain}
+A subset of a partially ordered set (poset) is called a \textbf{chain} if every pair of elements in the subset is comparable (forming a total order).
+\end{block}
+\begin{block}{Anti-chain}
+A subset of a poset is called an \textbf{anti-chain} if no two distinct elements in the subset are comparable to each other.
+\end{block}
+\vspace{0.2cm}
+\textbf{Example: Power set of $S = \{a, b, c\}$ under subset inclusion ($\subseteq$)}
+\begin{itemize}
+    \item \textbf{Chain:} $\{\emptyset, \{a\}, \{a, b\}, \{a, b, c\}\}$ \\ \small \textit{(Each element is a subset of the next)}
+    \item \textbf{Anti-chain:} $\{\{a\}, \{b\}, \{c\}\}$ \\ \small \textit{(None of these are subsets of one another)}
+\end{itemize}
+\end{frame}
+
 % Slide 14: Partially Ordered Sets (Posets)
 \begin{frame}{Partially Ordered Sets (Posets)}
     \textbf{Definition} \\
